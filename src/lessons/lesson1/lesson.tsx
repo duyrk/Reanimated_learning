@@ -10,6 +10,10 @@ import Animated, {
 
 type Props = {};
 const SIZE = 100.0;
+const handleRotation = (progress: Animated.SharedValue<number>) => {
+  'worklet';
+  return `${progress.value * 2 * Math.PI}rad`;
+};
 const Lesson = (props: Props) => {
   //initial value
   const progress = useSharedValue(1);
@@ -18,17 +22,23 @@ const Lesson = (props: Props) => {
     return {
       opacity: progress.value,
       borderRadius: (progress.value * SIZE) / 2,
-      transform: [{scale: scale.value}],
+      transform: [{scale: scale.value}, {rotate: handleRotation(progress)}],
     };
   }, []);
   useEffect(() => {
     // progress.value = withTiming(0, {duration: 3000});
-    progress.value = withSpring(0.5);
-    scale.value = withRepeat(withSpring(1), 3, true);
+    progress.value = withRepeat(withSpring(0.5), -1, true);
+    scale.value = withRepeat(withSpring(1), -1, true);
   }, []);
 
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#FFF',
+      }}>
       <Animated.View
         style={[
           {
