@@ -8,6 +8,7 @@ import Lesson3 from './src/lessons/lesson3/lesson';
 import Lesson4 from './src/lessons/lesson4/lesson';
 import Lesson5 from './src/lessons/lesson5/lesson';
 import Lesson6 from './src/lessons/lesson6/lesson';
+import Lesson7 from './src/lessons/lesson7/lesson';
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -18,7 +19,8 @@ function App(): React.JSX.Element {
       {/* <Lesson3></Lesson3> interpolate scrollview */}
       {/* <Lesson4></Lesson4> interpolate color theme */}
       {/* <Lesson5></Lesson5>   Pinch Gesture */}
-      <Lesson6 />
+      {/* <Lesson6 /> */}
+      <Lesson7 />
     </GestureHandlerRootView>
   );
 }
