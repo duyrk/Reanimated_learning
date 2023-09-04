@@ -1,11 +1,9 @@
-import {Dimensions, StyleSheet, Switch, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, Switch} from 'react-native';
 import React, {useState} from 'react';
 import Animated, {
-  interpolate,
   interpolateColor,
   useAnimatedStyle,
   useDerivedValue,
-  useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
 interface Props {}

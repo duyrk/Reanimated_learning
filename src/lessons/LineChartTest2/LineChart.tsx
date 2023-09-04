@@ -140,14 +140,12 @@ const LineChart = (props: Props) => {
           fontSize={FONT_SIZE}
           fontFamily="Helvetica">
           {(maximumYFromData * (index / PARTS)).toFixed(precision)}
-          {/* {parseFloat(maximumYFromData * (index / PARTS)).toFixed(precision)} */}
         </Text>
       );
     });
   };
   return (
     <Svg
-      strokeWidth={5}
       fill={'none'}
       viewBox={`0 0 ${width} ${height}`}
       width={width}
@@ -166,13 +164,6 @@ const LineChart = (props: Props) => {
         strokeLinecap="round"
       />
       <CustomDots />
-      <G x={0} y={0}>
-        <Path d="M79.3846 65L69.2588 33.5H89.5104L79.3846 65Z" fill="#FFC107" />
-        <Rect x={0} y={0} width="180" height="45" rx="10" fill="#FFC107" />
-        <Text x={10} y={28} font-family="Verdana" fontSize={16} fill="white">
-          You learnt 30 lessons
-        </Text>
-      </G>
     </Svg>
   );
 };
