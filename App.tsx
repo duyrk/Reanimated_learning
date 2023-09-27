@@ -13,6 +13,7 @@ import RiveTest from './src/lessons/test-rive/RiveTest';
 import Test from './src/lessons/LineChartTest/Test';
 import Test1 from './src/lessons/LineChartTest2/Test';
 import Lesson8 from './src/lessons/lesson8/Lesson';
+import Testi18next from './src/lessons/Testi18next/Testi18next';
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -23,14 +24,15 @@ function App(): React.JSX.Element {
       {/* <Lesson3></Lesson3> interpolate scrollview */}
       {/* <Lesson4></Lesson4> interpolate color theme */}
       {/* <Lesson5></Lesson5>   */}
-       {/* Pinch Gesture */}
+      {/* Pinch Gesture */}
       {/* <Lesson6 />  */}
       {/* <Lesson7 />  */}
       {/* Circle Progress */}
       {/* <RiveTest /> */}
       {/* <Test /> */}
       {/* <Test1 /> */}
-      <Lesson8/>
+      {/* <Lesson8/> */}
+      <Testi18next />
     </GestureHandlerRootView>
   );
 }
