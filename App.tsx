@@ -14,6 +14,7 @@ import Test from './src/lessons/LineChartTest/Test';
 import Test1 from './src/lessons/LineChartTest2/Test';
 import Lesson8 from './src/lessons/lesson8/Lesson';
 import Testi18next from './src/lessons/Testi18next/Testi18next';
+import DateTimePickerTest from './src/lessons/TestDateTimePicker';
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -23,7 +24,7 @@ function App(): React.JSX.Element {
       {/* <Lesson2></Lesson2> Pangesture Handler*/}
       {/* <Lesson3></Lesson3> interpolate scrollview */}
       {/* <Lesson4></Lesson4> interpolate color theme */}
-      {/* <Lesson5></Lesson5>   */}
+      <Lesson5></Lesson5>  
       {/* Pinch Gesture */}
       {/* <Lesson6 />  */}
       {/* <Lesson7 />  */}
@@ -32,7 +33,8 @@ function App(): React.JSX.Element {
       {/* <Test /> */}
       {/* <Test1 /> */}
       {/* <Lesson8/> */}
-      <Testi18next />
+      {/* <Testi18next /> */}
+      {/* <DateTimePickerTest /> */}
     </GestureHandlerRootView>
   );
 }
